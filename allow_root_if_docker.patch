@@ -1,0 +1,13 @@
+diff --git a/Meta/shell_include.sh b/Meta/shell_include.sh
+index 16c72f3f2b..16622a7391 100644
+--- a/Meta/shell_include.sh
++++ b/Meta/shell_include.sh
+@@ -12,7 +12,7 @@ die() {
+ }
+ 
+ exit_if_running_as_root() {
+-    if [ "$(id -u)" -eq 0 ]; then
++    if [[ "$(id -u)" -eq 0 && ! -f /.dockerenv ]]; then
+        die "$*"
+     fi
+ }
