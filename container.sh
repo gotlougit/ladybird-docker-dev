@@ -12,7 +12,7 @@ print_help() {
 Usage: $NAME [COMMAND]
        Sets up ephemeral Docker containers for Ladybird dev
   Examples:
-    $NAME
+    $NAME run
         Runs "./Meta/ladybird.sh run ladybird" inside the container, passing a Wayland socket
     $NAME sh
         Opens a bash shell inside the container
@@ -50,7 +50,7 @@ if [ "$CMD" = "docker" ]; then
     exit 0
 elif [ "$CMD" = "sh" ]; then
     CONTAINER_CMD="bash"
-else
+elif [ "$CMD" != "run" ]; then
     print_help
     exit 0
 fi
