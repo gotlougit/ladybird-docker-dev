@@ -11,14 +11,10 @@
         '';
         buildInputs = [
           pkgs.pkg-config
-          pkgs.openssl.dev
-          pkgs.sqlite.dev
-          pkgs.gcc
-          pkgs.gnumake
-          pkgs.zig # Useful for cross compilation
-          pkgs.llvmPackages_15.libclang
+          pkgs.llvmPackages_18.libclang
           pkgs.gdb
           pkgs.rr
+          pkgs.just
           pkgs.tree-sitter
         ];
       };
