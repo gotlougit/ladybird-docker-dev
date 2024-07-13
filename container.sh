@@ -91,6 +91,7 @@ git apply --reject --whitespace=fix --ignore-space-change --ignore-whitespace \
 cd ..
 
 docker run --rm -it \
+    --cap-add=SYS_PTRACE --security-opt seccomp=unconfined \
     -e XDG_RUNTIME_DIR="${TMP_DIR}" \
     -e WAYLAND_DISPLAY="${WAYLAND_DISPLAY}" \
     --mount type=bind,source="$(pwd)/ladybird",target=/app \
