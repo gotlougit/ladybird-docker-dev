@@ -11,7 +11,6 @@
         '';
         buildInputs = [
           pkgs.pkg-config
-          pkgs.llvmPackages_18.libclang
           pkgs.gdb
           pkgs.rr
           pkgs.just
