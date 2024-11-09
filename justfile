@@ -10,3 +10,6 @@ sh:
 # Builds/updates Docker container
 docker:
     ./container.sh docker
+# Runs python http server inside the ladybird repo to run scripts locally in Ladybird
+serve:
+    docker exec -it ladybird_dev_container /bin/bash -c "cd /app && python3 -m http.server"
