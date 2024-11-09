@@ -15,6 +15,7 @@
           pkgs.rr
           pkgs.just
           pkgs.tree-sitter
+          pkgs.clang
         ];
       };
     };
