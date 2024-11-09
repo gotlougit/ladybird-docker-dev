@@ -86,6 +86,7 @@ fi
 # HACK: Allow root if running in rootless container
 # WARNING: DON'T do this with normal Docker, ony rootless Docker or Podman
 cd ladybird
+git restore Meta/shell_include.sh
 git apply --reject --whitespace=fix --ignore-space-change --ignore-whitespace \
     ../allow_root_if_docker.patch 2> /dev/null
 cd ..
