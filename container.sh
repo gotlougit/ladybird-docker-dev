@@ -50,6 +50,8 @@ if [ "$CMD" = "docker" ]; then
     exit 0
 elif [ "$CMD" = "sh" ]; then
     CONTAINER_CMD="bash"
+elif [ "$CMD" = "gdb" ]; then
+    CONTAINER_CMD="./Meta/ladybird.sh gdb Ladybird"
 elif [ "$CMD" != "run" ]; then
     print_help
     exit 0

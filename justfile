@@ -4,6 +4,9 @@ default:
 # Builds and runs Ladybird through container (first time setup if necessary)
 run:
     ./container.sh run
+# Builds and runs Ladybird through container in gdb (first time setup if necessary)
+gdb:
+    ./container.sh gdb
 # Opens shell inside container (first time setup if necessary)
 sh:
     ./container.sh sh

@@ -12,3 +12,4 @@ RUN apt install clang-18 clangd-18 clang-format-18 clang-tidy-18 lld-18 -y
 RUN apt install autoconf autoconf-archive automake build-essential ccache cmake curl fonts-liberation2 git libavcodec-dev libavformat-dev libavutil-dev libgl1-mesa-dev nasm ninja-build pkg-config qt6-base-dev qt6-tools-dev-tools qt6-wayland tar unzip zip -y
 RUN apt install libpulse-dev qt6-multimedia-dev -y
 RUN apt install python3-pip -y
+RUN apt install gdb -y
