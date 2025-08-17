@@ -1,5 +1,17 @@
+diff --git a/Meta/ladybird.py b/Meta/ladybird.py
+index 9d82c873ef..1cc20c5bfb 100755
+--- a/Meta/ladybird.py
++++ b/Meta/ladybird.py
+@@ -130,7 +130,6 @@ def main():
+ 
+     if platform.host_system != HostSystem.Windows and os.geteuid() == 0:
+         print("Do not run ladybird.py as root, your Build directory will become root-owned", file=sys.stderr)
+-        sys.exit(1)
+     elif platform.host_system == HostSystem.Windows and "VCINSTALLDIR" not in os.environ:
+         print("ladybird.py must be run from a Visual Studio enabled environment", file=sys.stderr)
+         sys.exit(1)
 diff --git a/Meta/shell_include.sh b/Meta/shell_include.sh
-index 16c72f3f2b..16622a7391 100644
+index ad8620ec64..dd08931626 100644
 --- a/Meta/shell_include.sh
 +++ b/Meta/shell_include.sh
 @@ -12,7 +12,7 @@ die() {
