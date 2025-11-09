@@ -44,14 +44,14 @@ docker_setup() {
 }
 
 CMD=$1
-CONTAINER_CMD="./Meta/ladybird.py run"
+CONTAINER_CMD="./Meta/ladybird.py run Ladybird"
 if [ "$CMD" = "docker" ]; then
     docker_setup "true"
     exit 0
 elif [ "$CMD" = "sh" ]; then
     CONTAINER_CMD="bash"
 elif [ "$CMD" = "gdb" ]; then
-    CONTAINER_CMD="./Meta/ladybird.py gdb Ladybird"
+    CONTAINER_CMD="./Meta/ladybird.py build --preset Debug && ./Meta/ladybird.py debug Ladybird"
 elif [ "$CMD" = "test" ]; then
     CONTAINER_CMD="./Meta/ladybird.py test"
 elif [ "$CMD" != "run" ]; then
