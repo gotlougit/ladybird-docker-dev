@@ -105,6 +105,7 @@ docker run --rm -it \
     --mount type=bind,source="$(pwd)/.ccache",target=/root/.ccache \
     --hostname "ladybird-dev-container" \
     -v "${XDG_RUNTIME_DIR}/${WAYLAND_DISPLAY}":"${TMP_DIR}/${WAYLAND_DISPLAY}" \
+    -v "/dev/dri/renderD128":"/dev/dri/renderD128" \
     ladybird-dev:latest bash -c \
     "cd /app && ${CONTAINER_CMD}"
 
