@@ -16,6 +16,9 @@
           pkgs.just
           pkgs.tree-sitter
           pkgs.clang
+          pkgs.ninja
+          pkgs.cmake
+          pkgs.python3
         ];
       };
     };
